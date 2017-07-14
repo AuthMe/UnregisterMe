@@ -1,0 +1,12 @@
+name: UnregisterMe
+version: ${project.version}
+main: fr.xephi.unregisterme.UnregisterMe
+authors: [sgdc3]
+description: Simple plugin that allow players to unregister from the AuthMe database.
+commands:
+  unregister:
+    description: Unregister an account
+    usage: /unregister <password>
+    permission: unregisterme.use
+    aliases:
+    - unreg

@@ -1,0 +1,18 @@
+# Database connection parameters
+database:
+  jdbcUrl: 'mysql://localhost:3306/authme'
+  username: 'authme'
+  password: '12345'
+  tableName: 'authme'
+  nameColumn: 'username'
+
+# Player blacklist (useful for staff memebers)
+blacklist:
+  - Notch
+  - Steve
+
+# Messages
+messages:
+  onlyPlayers: 'This command is available only to players!'
+  success: 'You have beed correcty unregistered from the database!'
+  error: 'An error occurred while removing the user from the database.'
