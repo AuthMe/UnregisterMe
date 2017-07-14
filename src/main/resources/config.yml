@@ -1,6 +1,6 @@
 # Database connection parameters
 database:
-  jdbcUrl: 'mysql://localhost:3306/authme'
+  jdbcUrl: 'jdbc:mysql://localhost:3306/authme'
   username: 'authme'
   password: '12345'
   tableName: 'authme'
