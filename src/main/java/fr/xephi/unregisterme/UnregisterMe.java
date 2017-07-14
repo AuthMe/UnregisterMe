@@ -51,12 +51,20 @@ public final class UnregisterMe extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!(sender instanceof Player)) {
+        if (!(sender instanceof Player)) {
             sender.sendMessage(getMessage("onlyPlayers"));
             return true;
         }
         Player player = (Player) sender;
         String playerName = player.getName();
+        String lowercaseName = playerName.toLowerCase();
+
+        if (player.hasPermission("unregisterme.protect") || configuration.getStringList("blacklist").contains(lowercaseName)) {
+            sender.sendMessage(getMessage("protected"));
+            logger.warning("User " + playerName + "(IP:" + player.getAddress().getAddress() + ") tried to unregister, but the account is protected!");
+            return true;
+        }
+
         logger.info("User " + playerName + "(IP:" + player.getAddress().getAddress() + ") is performing an unregister...");
         new BukkitRunnable() {
 

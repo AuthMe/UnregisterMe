@@ -6,13 +6,14 @@ database:
   tableName: 'authme'
   nameColumn: 'username'
 
-# Player blacklist (useful for staff memebers)
+# Player blacklist (useful for staff members, please use LOWERCASE names)
 blacklist:
-  - Notch
-  - Steve
+  - notch
+  - steve
 
 # Messages
 messages:
-  onlyPlayers: 'This command is available only to players!'
-  success: 'You have beed correcty unregistered from the database!'
-  error: 'An error occurred while removing the user from the database.'
+  onlyPlayers: '&cThis command is available only to players!'
+  protected: '&cThis account is protected, you can''t unregister it!'
+  success: '&aYou have beed correcty unregistered from the database!'
+  error: '&cAn error occurred while removing the user from the database.'
