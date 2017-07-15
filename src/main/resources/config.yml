@@ -5,6 +5,9 @@ database:
   password: '12345'
   tableName: 'authme'
   nameColumn: 'username'
+  passwordColumn: 'password'
+
+disableUnregister: true
 
 # Player blacklist (useful for staff members, please use LOWERCASE names)
 blacklist:
@@ -15,5 +18,6 @@ blacklist:
 messages:
   onlyPlayers: '&cThis command is available only to players!'
   protected: '&cThis account is protected, you can''t unregister it!'
-  success: '&aYou have beed correcty unregistered from the database!'
-  error: '&cAn error occurred while removing the user from the database.'
+  unregisterSuccess: '&aYou have been correcty unregistered from the database!'
+  changepasswordSuccess: '&aYou have changed password correctly!'
+  error: '&cAn error occurred while performing the command.'

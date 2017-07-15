@@ -6,7 +6,21 @@ description: Simple plugin that allow players to unregister from the AuthMe data
 commands:
   unregister:
     description: Unregister an account
-    usage: /unregister <password>
+    usage: /unregister
     permission: unregisterme.use
     aliases:
     - unreg
+  changepassword:
+    description: Change password of an account
+    usage: /changepassword <newPassword>
+    permission: unregisterme.changepassword
+    aliases:
+    - changepass
+    - cp
+permissions:
+  unregisterme.unregister:
+    description: Command permission to unregister.
+    default: false
+  unregisterme.changepassword:
+    description: Command permission to change the password.
+    default: true
