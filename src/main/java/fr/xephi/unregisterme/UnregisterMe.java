@@ -109,7 +109,7 @@ public final class UnregisterMe extends JavaPlugin {
                             statement.setString(1, newHash);
                             statement.setString(2, playerName.toLowerCase());
                             statement.executeUpdate();
-                            sender.sendMessage(getMessage("changepasswordSucces"));
+                            sender.sendMessage(getMessage("changepasswordSuccess"));
                             logger.info("User " + playerName + " has changed password correctly!");
                             return;
                         } catch (SQLException e) {
