@@ -7,12 +7,19 @@ database:
   nameColumn: 'username'
   passwordColumn: 'password'
 
-disableUnregister: true
+unregister:
+  enabled: true
+  kick: true
+  # Placeholders: %player%
+  postCommands: []
 
-# Player blacklist (useful for staff members, please use LOWERCASE names)
-blacklist:
-  - notch
-  - steve
+changepassword:
+  enabled: true
+  kick: true
+  # Placeholders: %player%
+  postCommands: []
+
+logFile: true
 
 # Messages
 messages:

@@ -1,26 +1,44 @@
-name: UnregisterMe
+name: ${project.name}
 version: ${project.version}
 main: fr.xephi.unregisterme.UnregisterMe
 authors: [sgdc3]
-description: Simple plugin that allow players to unregister from the AuthMe database.
+description: ${project.description}
+api-version: 1.13
 commands:
   unregister:
     description: Unregister an account
     usage: /unregister
-    permission: unregisterme.use
+    permission: unregisterme.commands.unregister
     aliases:
     - unreg
   changepassword:
     description: Change password of an account
     usage: /changepassword <newPassword>
-    permission: unregisterme.changepassword
+    permission: unregisterme.commands.changepassword
     aliases:
     - changepass
     - cp
+  protectuser:
+    description: Adds an user to the UnregisterMe blacklist
+    usage: /protectuser <username>
+    permission: unregisterme.commands.protectuser
+  unprotectuser:
+    description: Removes an user from the UnregisterMe blacklist
+    usage: /unprotectuser <username>
+    permission: unregisterme.commands.unprotectuser
 permissions:
-  unregisterme.unregister:
+  unregisterme.commands.unregister:
     description: Command permission to unregister.
     default: false
-  unregisterme.changepassword:
+  unregisterme.commands.changepassword:
     description: Command permission to change the password.
-    default: true
+    default: false
+  unregisterme.commands.protectuser:
+    description: Command permission to add a user to the UnregisterMe blacklist.
+    default: false
+  unregisterme.commands.unprotectuser:
+    description: Command permission to remove a user from the UnregisterMe blacklist.
+    default: false
+  unregisterme.protect:
+    description: Protects the user from any UnregisterMe command.
+    default: false
