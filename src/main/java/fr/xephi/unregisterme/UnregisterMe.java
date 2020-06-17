@@ -184,7 +184,7 @@ public final class UnregisterMe extends JavaPlugin {
                             new BukkitRunnable() {
                                 @Override
                                 public void run() {
-                                    String message = getMessage("unregisterSucces");
+                                    String message = getMessage("unregisterSuccess");
                                     if (getConfig().getBoolean("unregister.kick")) {
                                         player.kickPlayer(message);
                                     } else {
